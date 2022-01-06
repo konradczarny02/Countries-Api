@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { GlobalStyles } from 'assets/styles/GlobalStyles';
+import { ThemeProvider } from 'styled-components';
+import { theme } from 'assets/styles/theme';
+import CountriesDashboard from 'views/CountriesDashboard';
 
 const Root = () => {
-  return <h1>Hello world</h1>;
+  const [themeMode, setThemeMode] = useState('light');
+
+  const changeTheme = () => (themeMode === 'light' ? setThemeMode('dark') : setThemeMode('light'));
+
+  return (
+    <ThemeProvider theme={themeMode === 'light' ? theme.light : theme.dark}>
+      <GlobalStyles />
+      <CountriesDashboard changeTheme={changeTheme} />
+    </ThemeProvider>
+  );
 };
 
 export default Root;
