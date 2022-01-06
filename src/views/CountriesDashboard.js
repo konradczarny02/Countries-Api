@@ -4,14 +4,17 @@ import Header from 'components/organisms/Header/Header';
 import CountriesList from 'components/organisms/CountriesList/CountriesList';
 import SearchInput from 'components/molecules/SearchInput/SearchInput';
 import Filter from 'components/organisms/Filter/Filter';
+import CountriesProvider from 'providers/CountriesProvider';
 
 const CountriesDashboard = ({ changeTheme }) => {
   return (
     <Wrapper>
       <Header changeTheme={changeTheme} />
-      <SearchInput />
-      <Filter />
-      <CountriesList />
+      <CountriesProvider>
+        <SearchInput />
+        <Filter />
+        <CountriesList />
+      </CountriesProvider>
     </Wrapper>
   );
 };

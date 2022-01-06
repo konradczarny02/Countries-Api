@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as Loop } from 'assets/images/Loop.svg';
 import { Wrapper } from 'components/molecules/SearchInput/SearchInput.styles';
 

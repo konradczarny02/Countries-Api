@@ -5,7 +5,6 @@ import { Wrapper, Description } from 'components/molecules/Country/Country.style
 const Country = ({ countryData }) => {
   return (
     <Wrapper key={countryData.name.common}>
-      {console.log(countryData)}
       <img src={countryData.flags.png} />
       <Description>
         <Title>{countryData.name.common}</Title>

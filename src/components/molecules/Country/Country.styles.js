@@ -29,6 +29,8 @@ export const Description = styled.div`
     color: ${({ theme }) => theme.text};
   }
   p {
+    font-size: 14px;
+    color: ${({ theme }) => theme.text};
     margin: 2px;
     font-weight: 600;
   }
