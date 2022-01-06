@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundSecondary};
   height: 80px;
   padding: 0 16px;
-  width: 100%;
+  flex-basis: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

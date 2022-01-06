@@ -1,7 +1,20 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.form`
-  margin: 25px auto 25px 10%;
+export const Wrapper = styled.div`
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+
+  @media (min-width: 1150px) {
+    justify-content: flex-start;
+    flex-basis: 35%;
+    margin: 25px auto;
+  }
+`;
+
+export const SearchInputWrapper = styled.form`
   height: 50px;
   border-radius: 6px;
   width: 90%;

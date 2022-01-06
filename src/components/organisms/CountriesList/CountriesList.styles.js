@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.ul`
+  padding: 0;
   max-height: 80%;
-  width: 90%;
+  margin: 25px auto;
+  flex-basis: 90%;
   background-color: transparent;
   display: grid;
   grid-gap: 25px;
