@@ -5,14 +5,21 @@ export const CountriesContext = React.createContext({
   countries: [],
   filter: '',
   handleFilterChange: () => {},
+  handleSearchCountry: () => {},
+  searchValue: '',
 });
 
 const CountriesProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [filter, setFilter] = useState('All');
+  const [searchValue, setSearchValue] = useState('');
 
   const handleFilterChange = (filterValue) => {
     setFilter(filterValue);
+  };
+
+  const handleSearchCountry = (searchValue) => {
+    setSearchValue(searchValue);
   };
 
   useEffect(() => {
@@ -22,7 +29,19 @@ const CountriesProvider = ({ children }) => {
       .catch((err) => console.error(err));
   }, []);
 
-  return <CountriesContext.Provider value={{ countries, filter, handleFilterChange }}>{children}</CountriesContext.Provider>;
+  return (
+    <CountriesContext.Provider
+      value={{
+        countries,
+        filter,
+        handleFilterChange,
+        searchValue,
+        handleSearchCountry,
+      }}
+    >
+      {children}
+    </CountriesContext.Provider>
+  );
 };
 
 export default CountriesProvider;
