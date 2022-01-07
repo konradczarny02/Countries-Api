@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.ul`
   padding: 0;
-  max-height: 80%;
+  min-height: calc(100vh - 250px);
   margin: 25px auto;
   flex-basis: 90%;
   background-color: transparent;

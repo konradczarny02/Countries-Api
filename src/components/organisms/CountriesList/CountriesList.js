@@ -4,11 +4,10 @@ import { CountriesContext } from 'providers/CountriesProvider';
 import { Wrapper } from 'components/organisms/CountriesList/CountriesList.styles';
 
 const CountriesList = () => {
-  const { countries, filter } = useContext(CountriesContext);
+  const { countries, filter, searchValue } = useContext(CountriesContext);
   const [filteredCountries, setFilteredCountries] = useState([]);
 
   useEffect(() => {
-    console.log('hi');
     filter === 'All'
       ? setFilteredCountries(countries)
       : setFilteredCountries(countries.filter((country) => country.region === filter));
@@ -16,9 +15,11 @@ const CountriesList = () => {
 
   return (
     <Wrapper>
-      {filteredCountries
-        ? filteredCountries.map((country) => <Country countryData={country} key={country.name.common} />)
-        : countries.map((country) => <Country countryData={country} key={country.name.common} />)}
+      {searchValue
+        ? filteredCountries
+            .filter((country) => country.name.common.toLowerCase().includes(searchValue.toLowerCase()))
+            .map((country) => <Country countryData={country} key={country.population.toString()} />)
+        : filteredCountries.map((country) => <Country countryData={country} />)}
     </Wrapper>
   );
 };
