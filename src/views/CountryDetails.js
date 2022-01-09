@@ -24,7 +24,7 @@ const CountryDetails = ({ changeTheme }) => {
         <Details details={countryDetails} />
       ) : (
         <LoadingWrapper>
-          <p>Loading...</p>
+          <h2>Loading...</h2>
         </LoadingWrapper>
       )}
     </Wrapper>

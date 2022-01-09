@@ -25,7 +25,11 @@ const Details = ({ details }) => {
           <DetailsInfo details={details} />
           <BorderCountriesWrapper>
             <Title>Border Countries:</Title>
-            {details.borders ? details.borders.map((borderCountry) => <BorderCountry>{borderCountry}</BorderCountry>) : null}
+            {details.borders ? (
+              details.borders.map((borderCountry) => <BorderCountry>{borderCountry}</BorderCountry>)
+            ) : (
+              <p>No border countries</p>
+            )}
           </BorderCountriesWrapper>
         </InfoWrapper>
       </ContentWrapper>

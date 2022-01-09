@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -15,11 +15,10 @@ export const ContentWrapper = styled.div`
   flex-wrap: wrap;
 
   button {
-    margin: 30px 0;
+    margin: 20px 0;
   }
 
   img {
-    margin: 30px 0;
     width: 100%;
     height: 230px;
     border-radius: 6px;
@@ -43,7 +42,7 @@ export const ContentWrapper = styled.div`
 
 export const InfoWrapper = styled.div`
   display: grid;
-  grid-template-rows: 80% 20%;
+  grid-template-rows: 75% 25%;
 
   @media (min-width: 1000px) {
     grid-template-rows: 60% 40%;
@@ -64,15 +63,19 @@ export const BorderCountriesWrapper = styled.div`
   flex-wrap: wrap;
   width: 100%;
 
+  p {
+    color: ${({ theme }) => theme.text};
+  }
+
   h1 {
     margin-right: 5px;
   }
 `;
 export const BorderCountry = styled.p`
   width: 100px;
-  height: 30px;
+  height: 25px;
   margin: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
   box-shadow: 1px 4px 11px -6px rgba(0, 0, 0, 0.6);
   display: inline-flex;
   justify-content: center;
