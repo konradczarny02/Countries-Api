@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as ReturnIcon } from 'assets/images/ReturnIcon.svg';
 
-const Wrapper = styled.button`
+const Wrapper = styled.div`
+  flex-basis: 100%;
+`;
+
+const ButtonWrapper = styled.button`
   width: 100px;
   height: 40px;
   display: flex;
@@ -12,13 +16,23 @@ const Wrapper = styled.button`
   border-radius: 6px;
   box-shadow: 1px 4px 11px -6px rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.backgroundSecondary};
+
+  svg {
+    stroke: ${({ theme }) => theme.text};
+  }
+
+  p {
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
 const ReturnButton = ({ handleReturnToHome }) => {
   return (
-    <Wrapper onClick={() => handleReturnToHome()}>
-      <ReturnIcon />
-      <p>Back</p>
+    <Wrapper>
+      <ButtonWrapper onClick={() => handleReturnToHome()}>
+        <ReturnIcon />
+        <p>Back</p>
+      </ButtonWrapper>
     </Wrapper>
   );
 };

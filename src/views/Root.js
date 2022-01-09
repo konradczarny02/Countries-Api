@@ -8,7 +8,11 @@ import CountriesProvider from 'providers/CountriesProvider';
 import CountryDetails from 'views/CountryDetails';
 
 const Root = () => {
-  const [themeMode, setThemeMode] = useState('light');
+  const [themeMode, setThemeMode] = useState(localStorage.getItem('theme'));
+
+  {
+    localStorage.setItem('theme', themeMode);
+  }
 
   const changeTheme = () => (themeMode === 'light' ? setThemeMode('dark') : setThemeMode('light'));
 

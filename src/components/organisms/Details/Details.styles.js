@@ -11,9 +11,8 @@ export const Wrapper = styled.div`
 
 export const ContentWrapper = styled.div`
   width: 320px;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
 
   button {
     margin: 30px 0;
@@ -24,6 +23,30 @@ export const ContentWrapper = styled.div`
     width: 100%;
     height: 230px;
     border-radius: 6px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 90%;
+
+    img {
+      width: 400px;
+      height: 300px;
+      margin-right: 100px;
+
+      @media (min-width: 1400px) {
+        width: 560px;
+        height: 400px;
+      }
+    }
+  }
+`;
+
+export const InfoWrapper = styled.div`
+  display: grid;
+  grid-template-rows: 80% 20%;
+
+  @media (min-width: 1000px) {
+    grid-template-rows: 60% 40%;
   }
 `;
 
@@ -40,6 +63,10 @@ export const BorderCountriesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
+  h1 {
+    margin-right: 5px;
+  }
 `;
 export const BorderCountry = styled.p`
   width: 100px;
