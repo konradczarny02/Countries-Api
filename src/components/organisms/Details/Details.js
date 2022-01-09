@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Wrapper,
   ContentWrapper,
@@ -20,13 +20,13 @@ const Details = ({ details }) => {
     <Wrapper>
       <ContentWrapper>
         <ReturnButton handleReturnToHome={handleReturnToHome} />
-        <img src={details.flags.png} />
+        <img src={details.flags.png} alt={`${details.name.common} Flag`} />
         <InfoWrapper>
           <DetailsInfo details={details} />
           <BorderCountriesWrapper>
             <Title>Border Countries:</Title>
             {details.borders ? (
-              details.borders.map((borderCountry) => <BorderCountry>{borderCountry}</BorderCountry>)
+              details.borders.map((borderCountry) => <BorderCountry key={borderCountry}>{borderCountry}</BorderCountry>)
             ) : (
               <p>No border countries</p>
             )}

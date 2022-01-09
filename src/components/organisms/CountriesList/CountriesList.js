@@ -18,8 +18,8 @@ const CountriesList = () => {
       {searchValue
         ? filteredCountries
             .filter((country) => country.name.common.toLowerCase().includes(searchValue.toLowerCase()))
-            .map((country) => <Country countryData={country} key={country.population.toString()} />)
-        : filteredCountries.map((country) => <Country countryData={country} />)}
+            .map((country) => <Country countryData={country} key={country.name.common} />)
+        : filteredCountries.map((country) => <Country countryData={country} key={country.name.common} />)}
     </Wrapper>
   );
 };

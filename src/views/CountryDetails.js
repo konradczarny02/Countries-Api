@@ -16,7 +16,7 @@ const CountryDetails = ({ changeTheme }) => {
     return () => {
       setCountryDetails([]);
     };
-  }, []);
+  }, [params.name]);
   return (
     <Wrapper>
       <Header changeTheme={changeTheme} />
