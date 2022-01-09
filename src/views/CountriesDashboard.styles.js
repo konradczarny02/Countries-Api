@@ -13,4 +13,8 @@ export const Wrapper = styled.div`
   align-items: center;
   transition: background-color 0.1s ease-in-out;
   background-color: ${({ theme }) => theme.background};
+
+  h2 {
+    color: ${({ theme }) => theme.text};
+  }
 `;
