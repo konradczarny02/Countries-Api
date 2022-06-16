@@ -1,6 +1,6 @@
 # Countries API 
 
-## [Frontend Mentor Challenge Solution](https://www.frontendmentor.io/home "Frontend Mentor Challenge Solution")
+## [Frontend Mentor Challenge Solution](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca "Frontend Mentor Challenge Solution")
 
 ### [Live version](https://countries-api-woad.vercel.app/countries "Live version")
 
